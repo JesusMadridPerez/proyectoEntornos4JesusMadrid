@@ -61,3 +61,53 @@ git commit -m "Primer commit"
 
 ![Imagen areas git](/proyectoEntornos4JesusMadrid/Imagenes/git-areas1.png)
 
+### Como ver los cambios realizados
+
+Para ello solo hay que usar uno de estos comandos
+~~~bash
+git log
+git log --oneline
+git log --oneline --all
+
+~~~
+- El primero se usa para obtener informacion detallada de los commits
+- El segundo se usa para obtener informacion en una sola linea 
+- El tercero se usa para ver todos los commits de todas las ramas
+
+### Como movernos a un commit anterior
+
+Para ello se usa el comando
+
+~~~bash
+git checkout 88d2
+~~~
+
+El numero del final corresponde con el hash del commit, en tu caso pon el hash de tu commit
+
+
+Una vez estas en un commit anterior es importante que no modifiques nada, pero si puedes ver
+lo que has realizado anteriormente, si modificas algo en un commit podria surgir un conflicto
+
+### Como etiquetar commits
+
+Las etiquetas pueden ser muy utiles porque gracias a ellas podemos hacer referencia a un commit
+ sin nesesidad de llamar al hash de dicho commit
+~~~bash
+git tag -a nombreEtiqueta -m "mensaje" commitAEtiquetar
+~~~
+
+### Como ver los cambios introducidos respecto al commit anterior
+
+~~~bash
+git show
+~~~
+
+### Como ver las diferencias entre varios commits
+
+~~~bash
+git diff v1..v2
+~~~
+
+
+
+
