@@ -59,7 +59,7 @@ git add README.md
 git commit -m "Primer commit"
 ```
 
-![Imagen areas git](/proyectoEntornos4JesusMadrid/Imagenes/git-areas1.png)
+![Imagen areas git](Imagenes/git-areas1.png)
 
 ### Como ver los cambios realizados
 
@@ -107,6 +107,34 @@ git show
 ~~~bash
 git diff v1..v2
 ~~~
+
+### Como subir todos nuestros commit a GitHub
+
+1. Crear un repositorio vacio, completamente vacio y preferiblemente con el mismo nombre
+ 	que el repositorio local
+2. Deberas elegir como quieres asociar tu repositorio local a GitHub si mediante HTTPS o SSH
+ en este caso elegiremos HTTPS
+!(imagen HTTPS)[Imagenes/Captura de pantalla 2025-05-04 181534.png]
+3. Asociar el repositorio local a GitHub
+	Para ello usaremos `git remote add origin https://github.com/JesusMadridPerez/proyectoEntornos4JesusMadrid/tree/main`
+	cambia la direccion https por la de tu repositorio
+4. Comprobar si se ha asociado correctamente
+`git remote -v`
+!(git remote -v)[Imagenes/git remote v.png]
+5. Subir todos los commits al repositorio local
+`git push -u origin main`
+6. Por ultimo deberas de exportar al proyecto remoto las etiquetas
+`git push --tags`
+
+### Como deshacer cambios en el repositorio local
+
+Si por error has borrado algo que no tenias que borrar no te preocupes si tienes commits anteriores se puede solucionar
+Hay dos posibilidades:
+	- Si no has creado otro commit despues del error independientemente de que hayas o no hecho git add 
+		Debes usar el comando `git reset --hard` que borrara todo lo que se haya realizado despues
+		del ultimo commit
+	- Si has hecho un commit despues del error debes de usar el comando `git reset --hard~n` cambiando n por el numero
+		de commits hacia atras que quieres regresar
 
 
 
