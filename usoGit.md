@@ -114,13 +114,15 @@ git diff v1..v2
  	que el repositorio local
 2. Deberas elegir como quieres asociar tu repositorio local a GitHub si mediante HTTPS o SSH
  en este caso elegiremos HTTPS
-!(imagen HTTPS)[Imagenes/Captura de pantalla 2025-05-04 181534.png]
+
+!(imagen HTTPS)[Imagenes/https.png]
 3. Asociar el repositorio local a GitHub
 	Para ello usaremos `git remote add origin https://github.com/JesusMadridPerez/proyectoEntornos4JesusMadrid/tree/main`
 	cambia la direccion https por la de tu repositorio
 4. Comprobar si se ha asociado correctamente
 `git remote -v`
-!(git remote -v)[Imagenes/git remote v.png]
+
+!(git remote -v)[Imagenes/gitremotev.png]
 5. Subir todos los commits al repositorio local
 `git push -u origin main`
 6. Por ultimo deberas de exportar al proyecto remoto las etiquetas
