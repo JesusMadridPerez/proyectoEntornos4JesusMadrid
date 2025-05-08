@@ -58,6 +58,10 @@ git add README.md
 ```bash
 git commit -m "Primer commit"
 ```
+Si añadimos modificamos mas de un archivo en un solo commit y no sabemos si los hemos 
+añadido todos al area de preparacion podremos usar el comando `git status` para 
+comprobar si se han añadido o no las modificaciones, apareciendo en verde si si se 
+añadieron o en rojo si no
 
 ![Imagen areas git](Imagenes/git-areas1.png)
 
@@ -140,6 +144,104 @@ Hay dos posibilidades:
 	- Si has hecho un commit despues del error debes de usar el comando `git reset --hard~n` cambiando n por el numero
 		de commits hacia atras que quieres regresar
 
+### Archivo .gitignore
 
+Git tiene un archivo que se usa para conocer que tipos de archivos no deven incluirse en el repositorio remoto, por ejemplo
+los archivos ejecutables o archivos comprimidos no deben incluirse salvo contadas excepciones porque pesan demasiado, en 
+java tampoco deben de incluirse los archivos .jar  o los .class que son clases compiladas en la maquina virtual de java.
+Cada lenguaje de progranacion tiene archivos que no se deben incluir, pero la gran mayoria se insertan en el archivo 
+'.gitignored' de la siguiente forma
+
+~~~
+*.ExtensionArchivo
+~~~bash
+
+ejemplo
+
+~~~bash
+*.exe
+~~~
+
+El archivo .gitignored debe de escribir asi sin incluir ninguna extension adicional
+
+### Generacion de claves ssh para conectar nuestro repositorio a github
+
+Si has estado atento recordaras como en un apartado anterior se menciono que se podia unir nuestro repositorio local a GitHub
+de dos formas mediante HTTPS o SSH, se explico como hacerlo con HTTPS pero no se explico como unirlo mediante SSH, ahora es 
+el momento de explicar como unirlo mediante SSH
+
+#### ¿Porque deberia de unirlo mediante SSH?
+
+Por un motivo muy simple si unimos nuestro repositorio mediante HTTPS tendremos que introducir nuestro ususario y contraseña
+cada vez que hagamos `git push`
+
+1. En primer lugar deberemos de crear un par de claves SSH en nuestro ordenador
+Para ello solo tendremos que usar el comando 
+`ssh-keygen`
+
+Pulsamos todo a intro salvo que ya hayamos creado un par de claves anteriormente.En ese caso nos preguntará si deseamos
+ sobreescribir (Override (y/n)? ) pulsamos y.
+
+Si todo ha salido bien se nos creara un par de archivos en la carpeta ~/.ssh
+
+	- id_rsa
+	- id_rsa.pub
+
+Siendo el primero la clave privada y el segundo la clave publica.
+
+A continuación copia la clave publica en un archivo de texto
+
+
+2. Añadimos la clave publica a github
+
+Para ello entramos en nuestra cuenta de GitHub y en el menu general seleccionamos la opcion settings
+
+Luego elegimos la opcion SSH y GPG keys
+
+
+Buscamos el boton New SSH key y lo pulsamos
+
+Luego deberemos de ponerle un nombre a la clave y copiar la clava publica 
+
+3. Obtener URL SSH del repositorio
+
+Pulsar Botón Clone or download, Use SSH
+
+Copiamos URL en formato SSH. Su formato es relativamente fácil de memorizar. Siempre git@githbub.com seguido de dos puntos : 
+y luego el nombre de usuario / nombre de repositorio.
+
+4. Asociar nuestro repositorio local a GitHub
+
+Para ello deberemos dar de baja nuestro repositorio remoto, puesto que estaba unido mediante HTTPS
+~~~bash
+git  remote  remove  origin
+git  remote  add  origin   git@github.com: tu_usuario/tu_repositorio
+~~~
+
+Ahora es recomendable que hayas un nuevo commit y compruebes si te pide o no tus datos de usuario
+
+
+### Como resolver conflictos
+
+Los conflictos se producen cuando se ha hecho un cambio tanto en el repositorio remoto como en el local de la misma linea
+Por ejemplo modificar una fecha en el repositorio remoto, hacer commit y modificarla tambien en el repositorio local y hacer commit
+
+En este caso si hacemos `git push` nos dira que debemos actualizar el contenido de nuestro repositorio local con el del 
+remoto, si se han realizado cambios en el repositorio remoto se deberan de actualizar los datos mediante
+`git pull`
+
+para bajar los commits del repositorio remoto que no esten en el local 
+
+Una vez aqui se produce un conflicto puesto que se habia modificado la misma linea tanto en el repositorio local como remoto 
+y se hizo commit en ambos.
+
+Para erreglarlo debes abrir el archivo modificado, aqui veremos lineas como
+- `<<<<<<<` linea o lineasen commit local
+- `=======` linea o lineas en commit remoto
+
+Para resolver el conflicto debemos de elegir entre una de las dos opciones si las lineas del repositorio local o el remoto,
+o borrar las dos y escribir una linea nueva.Guardamos y hacemos un nuevo commit
+
+y hacemos `git push` para subir los cambios
 
 
