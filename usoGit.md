@@ -245,3 +245,36 @@ o borrar las dos y escribir una linea nueva.Guardamos y hacemos un nuevo commit
 y hacemos `git push` para subir los cambios
 
 
+### Creacion de ramas
+
+#### ¿Que son las ramas de git?
+
+Las ramas son copias de un commit, generalmente el ultimo de la rama principal. En estas ramas se pueden hacer cambios sin
+afectar a la rama principal y posteriormente integrar dichos cambios en la rama principal si lo vemos conveniente
+
+#### ¿Como crear las ramas?
+
+Se puede hacer de dos formas
+
+- `git checkout -b` `nueva rama`
+- `git branch` `nueva rama` y luego `git checkout` `nueva rama`
+
+La diferencia principal entre las dos formas es que con la primera nos movemos a la rama recien creada y con la segunda no
+
+Despues de crear la rama es recomendable usar `git log --oneline --all --graph` para ver de forma grafica las ramas
+
+#### 1. Creacion de ramas con git checkout -b
+
+- `git checkout -b  nueva-rama` de esta forma creamos una nueva rama a partir del commit actual y nos pasamos a ella
+- `git checkout -b  nueva-rama  commit-de-partida` de esta forma creamos una nueva rama a partir del commit especificado
+	y nos pasamos a ella
+
+#### 2. Crear ramas con git branch
+
+- `git branch  nueva-rama` Creamos una nueva rama a partir del commit actual sin pasarnos a ella
+- `git branch  nueva-rama  commit-de-partida` Creamos una nueva rama a partir de la actual sin pasarnos a ella
+
+#### 3. Pasar las ramas a GitHub
+
+Para ello usaremos `git push origin --all` para pasar todos los commit de todas las ramas a GitHub
+
