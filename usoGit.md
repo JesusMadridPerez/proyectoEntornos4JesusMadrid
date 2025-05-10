@@ -3,21 +3,21 @@
 En este apartado aprenderemos a usar git
 
 ### Índice
-	1.  [Instalar GitHub](#1-instalar-github)
-	2.  [Configuración inicial](#2-configuración-inicial)
-	3.  [Creación de un proyecto](#3-creación-de-un-proyecto)
-	4.  [Registro de commits](#4-registro-de-commits)
-	5.  [Como ver los cambios realizados](#5-cómo-ver-los-cambios-realizados)
-	6.  [Cómo movernos a un commit anterior](#6-cómo-movernos-a-un-commit-anterior)
-	7.  [Como subir todos nuestros commit a GitHub](#7-como-subir-todos-nuestros-commit-a-github)
-	8.  [Cómo deshacer cambios en el repositorio  local](#8-cómo-deshacer-cambios-en-el-repositorio-local)
-	9.  [Archivo .gitignore](#9-archivo-gitignore)
-	10. [Generación de claves ssh para conectar nuestro repositorio a github](10-Generación-de-claves-ssh-para-conectar-nuestro-repositorio-a-github)
-	11. [Cómo resolver conflictos](11-cómo-resolver-conflictos)
-	12. [Creación de ramas](#12-creación-de-ramas)
-	13. [Fusión de ramas](#13-fusión-de-ramas)
-	14. [Eliminar ramas](#14-eliminar-ramas)
-	15. [Como ver las ramas creadas en GitHub](#15-como-ver-las-ramas-creadas-en-github)
+1.  [Instalar GitHub](#1-instalar-github)
+2.  [Configuración inicial](#2-configuración-inicial)
+3.  [Creación de un proyecto](#3-creación-de-un-proyecto)
+4.  [Registro de commits](#4-registro-de-commits)
+5.  [Como ver los cambios realizados](#5-cómo-ver-los-cambios-realizados)
+6.  [Cómo movernos a un commit anterior](#6-cómo-movernos-a-un-commit-anterior)
+7.  [Como subir todos nuestros commit a GitHub](#7-como-subir-todos-nuestros-commit-a-github)
+8.  [Cómo deshacer cambios en el repositorio  local](#8-cómo-deshacer-cambios-en-el-repositorio-local)
+9.  [Archivo .gitignore](#9-archivo-gitignore)
+10. [Generación de claves ssh para conectar nuestro repositorio a github](10-Generación-de-claves-ssh-para-conectar-nuestro-repositorio-a-github)
+11. [Cómo resolver conflictos](11-cómo-resolver-conflictos)
+12. [Creación de ramas](#12-creación-de-ramas)
+13. [Fusión de ramas](#13-fusión-de-ramas)
+14. [Eliminar ramas](#14-eliminar-ramas)
+15. [Como ver las ramas creadas en GitHub](#15-como-ver-las-ramas-creadas-en-github)
 
 ### 1. Instalar GitHub
 En primer lugar hay que resaltar que para hacer uso de git primero hay que instalarlo, 
