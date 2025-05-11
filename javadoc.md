@@ -1,17 +1,13 @@
-
-
-
-
 ## Generación de código para java con javadoc
 
 ### Índice
 
-1. [¿Qué es javadoc?](#qué-es-javadoc)
-2. [¿Que se debe incluir en la documentación de una clase?](#que-se-debe-incluir-en-la-documentación-de-una-clase)
-3. [¿Cómo hacer un comentario javadoc?](#¿cómo-hacer-un-comentario-javadoc)
-4. [¿De que está compuesto un comentario javadoc?](#¿de-que-está-compuesto-un-comentario-javadoc)
-5. [Etiquetas javadoc](#etiquetas-javadoc)
-6. [Otras etiquetas](#otras-etiquetas)
+1. [¿Qué es javadoc?](#1-qué-es-javadoc)
+2. [¿Que se debe incluir en la documentación de una clase?](#2-que-se-debe-incluir-en-la-documentación-de-una-clase)
+3. [¿Cómo hacer un comentario javadoc?](#3-cómo-hacer-un-comentario-javadoc)
+4. [¿De que está compuesto un comentario javadoc?](#4-de-que-está-compuesto-un-comentario-javadoc)
+5. [Etiquetas javadoc](#5-etiquetas-javadoc)
+6. [Otras etiquetas](#6-otras-etiquetas)
 
 ### 1. ¿Qué es javadoc?
 
@@ -88,3 +84,6 @@ la clase String seria `@see String`
 - `@serealField` se usa para documentar un componente ObjectStreamField
 - `@serealData` se usa para describir métodos con un writeObject
 
+
+
+[Volver a README](README.md)

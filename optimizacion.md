@@ -3,9 +3,9 @@ En este apartado veremos distintos tipos de optimización del codigo
 
 ### Índice
 
-1. [Hediondez del codigo](#hediondez-del-codigo)
-2. [Analisis del codigo](#analisis-del-codigo)
-3. [Refactorización del código](#refactorización-del-código)
+1. [Hediondez del codigo](#1-hediondez-del-codigo)
+2. [Analisis del codigo](#2-analisis-del-codigo)
+3. [Refactorización del código](#3-refactorización-del-código)
 
 ### 1. Hediondez del codigo
 La hediondez del codigo o *code smell* en ingles, se refiere a sintomas del código fuente que no implican que no funcione 
@@ -59,3 +59,7 @@ Es el proceso de reformular el código fuente para hacerlo mas eficiente, legibl
 - Eliminación de código inalcanzable: eliminar codigo que nunca se ejecuta
 - Eliminación de código redundante: se usa para suprimir lineas innesesarias de código
 - Eliminación de código muerto: elimina código que ha dejado de usarse
+
+
+
+[Volver a README](README.md)

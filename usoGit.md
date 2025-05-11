@@ -312,6 +312,8 @@ estamos o no en la rama main`.
 
 3. Usamos el comando **`git merge`** *`rama_a_fusionar`* con esto fusionamos todos los commit de la rama a la rama main
 
+![git merge](Imagenes/gitmerge.png)
+
 ### 14. Eliminar ramas
 
 Si queremos eliminar una rama que no se haya fusionado con la rama main deberemos de usar **`git branch -D`** *`rama`*
@@ -324,5 +326,6 @@ Para ello usaremos el comando **`git branch -d `** *`rama`*
 
 Podremos verlas en **Insights**, **Network**
 
+![ramas github](Imagenes/ramasgithub.png)
 
-
+[Volver a README](README.md)
