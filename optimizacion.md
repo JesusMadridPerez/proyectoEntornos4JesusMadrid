@@ -13,6 +13,20 @@ correctamente el programa pero si hacen que funcione mas lento
 Algunos ejemplos de esto son:
 
 - **Código duplicado:** código que tiene una copia identica o casi identica en otro lado
+~~~java
+public class Calculadora {
+    public int sumar(int a, int b) {
+        return a + b;
+    }
+
+    public int sumarTresNumeros(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+~~~
+en este ejemplo el método sumarTresNumeros es redundante ya que para sumar tres numeros podrias simplemente llamar
+al primer metodo dos veces para sumar 3 numeros
 - **Clase grande:** clase que ha crecido mas de la cuenta y seria conveniente dividirla en varias
 - **Envidia de caracteristicas:** una clase que usa excesivamente métodos de otra clase
 
@@ -22,7 +36,23 @@ Existen dos tipos de analisis:
 
 - **Analisis dinamico:** se analiza el código en ejecución para identificar problemas de rendimiento, memoria o algun
 comportamiento inesperado. Un ejemplo de esto son los unit test de java que vimos en el tema anterior
+~~~java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
+public class CalculadoraTest {
+    @Test
+    public void testSumar() {
+        Calculadora calc = new Calculadora();
+        int resultado = calc.sumar(2, 3);
+        assertEquals(5, resultado, "La suma debería ser 5");
+    }
+}
+
+~~~
+
+en este ejemplo se comprueba que el método sumar de una clase calculadora funcione correctamente, comprobando que la suma sea
+correcta
 - **Analisis estatico:** se realiza sin ejecutar el código para detectar errores de sintaxis, seguridad o calidad del codigo
 se analiza mediante linters o web de inspección continua 
 
@@ -32,6 +62,12 @@ el código. Algunos ejemplos son:
 		- **C**: lint
 		- **java**: sonar
 		- **JavaScript**: JSLint , ESLint
+Ejemplo linter js
+~~~javaScript
+const mensaje = "Hola mundo"
+console.log(mensaje)
+~~~
+Antes de ejecutar el código el linter nos dira que debemos de poner ; al final de cada linea ya que es un error de sintaxis 
 
 ####  Continuous Inspection o Continuous Analysis
 
@@ -60,4 +96,28 @@ Es el proceso de reformular el código fuente para hacerlo mas eficiente, legibl
 - Eliminación de código redundante: se usa para suprimir lineas innesesarias de código
 - Eliminación de código muerto: elimina código que ha dejado de usarse
 
+Ejemplo de refactorización de código en java
+Los metodos mostrar mensaje bienvenida y mostrar mensaje despedida son redundantes y se podrian refactorizar
+~~~java
+public class Mensaje {
+    public void mostrarMensajeBienvenida() {
+        System.out.println("Bienvenido a la aplicación");
+    }
+
+    public void mostrarMensajeDespedida() {
+        System.out.println("Gracias por usar la aplicación");
+    }
+}
+
+~~~
+Refactorización del código
+Ahora solo hay un metodo mostrar mensaje que muestra el mensaje que le pases con un string por consola
+~~~java
+public class Mensaje {
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
+}
+
+~~~
 
