@@ -61,5 +61,3 @@ Es el proceso de reformular el código fuente para hacerlo mas eficiente, legibl
 - Eliminación de código muerto: elimina código que ha dejado de usarse
 
 
-
-[Volver a README](README.md)

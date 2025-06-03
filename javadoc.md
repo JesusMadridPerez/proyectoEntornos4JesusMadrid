@@ -85,5 +85,3 @@ la clase String seria `@see String`
 - `@serealData` se usa para describir métodos con un writeObject
 
 
-
-[Volver a README](README.md)

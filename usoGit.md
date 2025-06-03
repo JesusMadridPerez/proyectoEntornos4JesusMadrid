@@ -328,4 +328,3 @@ Podremos verlas en **Insights**, **Network**
 
 ![ramas github](Imagenes/ramasgithub.png)
 
-[Volver a README](README.md)
