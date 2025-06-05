@@ -76,13 +76,19 @@ Este servicio lo realizan sitios web como:
 
 ##### Scrutinizer
 
-- Soporta PHP, Python y Ruby.
+
 ![Scrutinizer](Imagenes/scrutinizer.jpg)
+
+- Soporta PHP, Python y Ruby.
+
 
 ##### SonarQube
 
-- Soporta mas de 20 lenguajes
+
 ![SonarQube](Imagenes/sonarqube.png)
+
+- Soporta mas de 20 lenguajes
+
 
 ### 3. Refactorización del código
 
